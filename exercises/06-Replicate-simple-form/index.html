@@ -1,22 +1,116 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>4Geeks Academy</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>4Geeks Academy</title>
+		<style>
+			/* your code here */
+			table,
+			table * {
+				border: 1px solid black;
+			}
+			tr:nth-child(1) {
+				background-color: rgb(195, 195, 255);
+			}
 
-    <style>
-        /* your code here */
-        
-    </style>
-</head>
+			#grupo_sexo,
+			#grupo_Medidas {
+				display: flex;
+				flex-direction: column;
+			}
 
-<body>
-    <form>
-        <!-- your code here -->
-        
-    </form>
-</body>
+			#grupo_sexo *,
+			#grupo_Medidas * {
+				border: none;
+			}
 
+			#grupo_textArea * {
+				display: block;
+				border: none;
+			}
+
+			#grupo_textArea textarea {
+				border-top: 2px solid gray;
+				border-left: 2px solid gray;
+				border-bottom: 0.1px solid rgba(0, 0, 0, 0.247);
+				border-right: 0.1px solid rgba(0, 0, 0, 0.247);
+				width: 98%;
+			}
+
+			#tdBoton {
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form>
+			<!-- your code here -->
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Value</th>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td>
+						<input type="text" />
+					</td>
+				</tr>
+				<tr>
+					<td>Sex</td>
+					<td id="grupo_sexo">
+						<div>
+							<input type="radio" id="idMasculino" name="grupo_sexo" value="male" />
+							<label for="idMasculino">Male:</label>
+						</div>
+						<div>
+							<input type="radio" id="idFemenino" name="grupo_sexo" value="female" />
+							<label for="idFemenino">Female:</label>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Eye color</td>
+					<td>
+						<select name="color">
+							<option value="red">green</option>
+							<option value="yellow">Yellow</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Check all that apply</td>
+					<td id="grupo_Medidas">
+						<div>
+							<input type="checkbox" id="talla" name="grupo_Medidas" />
+							<label for="talla">Over 6 feet tall</label>
+						</div>
+						<div>
+							<input type="checkbox" id="peso" name="grupo_Medidas" />
+							<label for="peso">Over 200 pounds</label>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2" id="grupo_textArea">
+						<div>Describe your athletic ability:</div>
+						<div>
+							<textarea name="comments"></textarea>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" id="tdBoton">
+						<input type="submit" value="Enter my information" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
 </html>
